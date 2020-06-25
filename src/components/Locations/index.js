@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Title from '../../layout/Title';
 import api from '../../services/api';
 
 const Locations = () => {
@@ -19,7 +20,8 @@ const Locations = () => {
 
   return (
     <div>
-      <h1>Total locations: {totalLocation}</h1>
+      <Title title="Locations across Pokemon World" />
+      <h3>Total locations: {totalLocation}</h3>
     </div>
   )
 }

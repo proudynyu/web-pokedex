@@ -1,15 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Button from '../Buttons';
 
-const Sidebar = ({ className }) => {
+import { Container, Hiper } from './styles';
+
+const Sidebar = () => {
   return (
-    <nav className={className}>
+    <Container>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/types">Pokemon types</Link></li>
-        <li><Link to="/locations">Locations</Link></li>
+        <Button><Hiper to="/">Home</Hiper></Button>
+        <Button><Hiper to="/types">Pokemon types</Hiper></Button>
+        <Button><Hiper to="/locations">Locations</Hiper></Button>
       </ul>
-    </nav>
+    </Container>
   )
 }
 

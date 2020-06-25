@@ -1,10 +1,13 @@
 import React from 'react';
+import { Container, Div, Title } from './styles';
 
-const Header = ({ className }) => {
+const Header = () => {
   return (
-    <div className={className}>
-      <h1>Welcome to Pokedex</h1>
-    </div>
+    <Container>
+      <Div>
+        <Title>Welcome to WebPokedex</Title>
+      </Div>
+    </Container>
   )
 }
 
