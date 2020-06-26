@@ -7,7 +7,7 @@ export const Container = styled.nav`
 
   background-color: var(--first);
   border-radius: 8px;
-  border: 3px double white;
+  box-shadow: var(--default-shadow);
 `;
 
 export const Hiper = styled(Link)`
@@ -17,7 +17,7 @@ export const Hiper = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--fourth);
+  color: var(--word);
   font-size: 18px;
   font-weight: bold;
 `;

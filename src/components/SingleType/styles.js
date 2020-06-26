@@ -16,9 +16,8 @@ export const Header = styled.header`
 
   justify-content: center;
   align-items: center;
-  background-color: var(--second);
+  background-color: var(--fourth);
   border-radius: 4px;
-  border: 2px solid var(--fourth);
 
   > span {
     color: var(--third);
@@ -31,18 +30,17 @@ export const Content = styled.div`
   flex-direction: column;
   height: 80%;
 
-  padding: 5px;
+  padding: 5px 10px;
   margin-top: 8px;
 
-  background-color: var(--second);
+  background-color: var(--fourth);
   border-radius: 4px;
-  border: 2px solid var(--fourth);
 `;
 
 export const Title = styled.h1`
   font-size: 25px;
   font-weight: bold;
-  color: var(--fourth);
+  color: var(--word);
 `;
 
 export const Subtitle = styled.h3`

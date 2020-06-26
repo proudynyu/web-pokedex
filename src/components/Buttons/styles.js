@@ -7,8 +7,7 @@ export const List = styled.li`
   width: 80%;
   height: 2rem;
 
-  background-color: var(--second);
-  border: 3px double white;
+  background-color: var(--fifth);
   border-radius: 4px;
 
   display: flex;

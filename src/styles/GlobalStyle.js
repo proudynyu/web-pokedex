@@ -2,11 +2,15 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle `
   :root {
-    --first: #B8D8D8;
+    --first: #283845;
     --second: #7A9E9F;
     --third: #4F6367;
-    --fourth: #EEF5DB;
-    --fifth: #FE5F55;
+    --fourth: #202C39;
+    --fifth: #AD343E;
+
+    --word: #D9DCD6;
+
+    --default-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.5);
   }
 
   * {
@@ -22,6 +26,8 @@ export default createGlobalStyle `
   body {
     font-family: 'Roboto', sans-serif;
     background: var(--fourth);
+
+    --webkit-smoothing: antialiased;
   }
 
   .container {

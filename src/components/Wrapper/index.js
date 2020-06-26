@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Subtitle, Grid, TileType } from './styles';
 
 const Wrapper = ({
+  onEvent,
   subtitle,
   data
 }) => {
@@ -12,6 +13,7 @@ const Wrapper = ({
         
         { data.map( item =>
           <TileType 
+           onClick={onEvent}
            key={item.name} 
            value={item.name} 
           >

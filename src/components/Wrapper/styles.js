@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Subtitle = styled.h3`
   font-size: 22px;
   font-weight: bold;
-  color: var(--fourth);
+  color: var(--word);
   margin-bottom: 5px;
 `;
 
@@ -17,15 +17,16 @@ export const Container = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  margin-top: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 5px;
+  width: 80%;
+  margin: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-gap: 8px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--second);
-  border: 2px solid white;
+  background-color: var(--fifth);
   border-radius: 4px;
+  border: none;
 
   display: flex;
   justify-content: center;
@@ -35,7 +36,7 @@ export const TileType = styled.button`
 
   cursor: pointer;
 
-  color: var(--fourth);
+  color: var(--word);
   font-size: 18px;
 
   transition: transform .2s, background-color .2s;

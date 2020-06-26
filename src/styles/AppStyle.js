@@ -14,5 +14,5 @@ export const Section = styled.section`
 
   background-color: var(--first);
   border-radius: 8px;
-  border: 3px double white;
+  box-shadow: var(--default-shadow);
 `;
