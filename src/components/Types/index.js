@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from 'react';
-import Title from '../../layout/Title';
-import TileType from '../../layout/TileType';
+import { Container, Header, Title, Grid, TileType } from './styles';
+
 import api from '../../services/api';
 
 const Types = () => {
@@ -19,10 +19,24 @@ const Types = () => {
   }, []);
 
   return (
-    <div>
-      <Title title={`Pokemon types: ${countTypes}`}/>
-      <TileType types={types} />
-    </div>
+    <Container>
+      <Header>
+        <Title>Pokemon Types</Title>
+        <span>How much types: {countTypes}</span>
+      </Header>
+
+      <Grid>
+        { types.map(name => (
+        <TileType key={name}>
+          <h2>{name}</h2>
+        </TileType>
+        ))}
+      </Grid>
+    </Container>
+    // <div>
+    //   <Title title={`Pokemon types: ${countTypes}`}/>
+    //   <TileType types={types} />
+    // </div>
   )
 }
 

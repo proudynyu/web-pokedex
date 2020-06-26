@@ -71,4 +71,27 @@ export const Text = styled.div`
 export const Field = styled.fieldset`
   flex: 1;
   margin-top: 10px;
+  border: none;
+`;
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+
+  > label {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--fourth);
+  }
+
+  > input {
+    border-radius: 4px;
+    padding: 5px 10px;
+    width: 50%;
+    border: none;
+    outline: none;
+    margin-top: 5px;
+    font-size: 18px;
+    color: var(--third);
+  }
 `;

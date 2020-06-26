@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 // import Title from '../../layout/Title'
 import { useHistory } from 'react-router-dom';
 
-import { Container, Title, Subtitle, Header, Content, Text, Field } from './styles';
+import { Container, Title, Subtitle, Header, Content, Text, Field, Form } from './styles';
 
 const Home = () => {
   const history = useHistory();
   const [pokename, setPokename] = useState('');
-  console.log(pokename);
 
   function handleSubmit(){
     history.push(`/pokemon/${pokename}`);
@@ -39,15 +38,16 @@ const Home = () => {
         </Text>
 
         <Field>
-          <form>
+          <Form autoComplete="off" onSubmit={handleSubmit}>
             <label htmlFor="pokemin">Pokemon Name:</label>
             <input 
               type="text"
               name="pokemon"
               value={pokename}
               onChange={e => setPokename(e.target.value)}
+              placeholder="Enter pokemon name"
             />
-          </form>
+          </Form>
         </Field>
       </Content>
     </Container>

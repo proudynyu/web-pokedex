@@ -13,7 +13,10 @@ export const Container = styled.nav`
 export const Hiper = styled(Link)`
   text-decoration: none;
   flex: 1;
-  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--fourth);
   font-size: 18px;
   font-weight: bold;
