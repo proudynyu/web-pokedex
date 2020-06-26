@@ -38,7 +38,7 @@ export const Grid = styled.div`
   grid-gap: 5px;
 `;
 
-export const TileType = styled.div`
+export const TileType = styled.button`
   background-color: var(--second);
   border: 2px solid white;
   border-radius: 4px;
@@ -47,16 +47,14 @@ export const TileType = styled.div`
   justify-content: center;
   align-items: center;
 
-  height: 1.5rem;
-
-  transition: transform .2s, background-color .2s;
+  height: 2rem;
 
   cursor: pointer;
 
-  > h2 {
-    color: var(--fourth);
-    font-size: 18px;
-  }
+  color: var(--fourth);
+  font-size: 18px;
+
+  transition: transform .2s, background-color .2s;
 
   &:hover {
     background-color: var(--third);

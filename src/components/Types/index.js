@@ -1,9 +1,11 @@
 import React, {  useState, useEffect } from 'react';
 import { Container, Header, Title, Grid, TileType } from './styles';
+import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
 const Types = () => {
+  const history = useHistory();
   const [types, setTypes] = useState([]);
   const [countTypes, setCountTypes] = useState(0);
 
@@ -18,6 +20,12 @@ const Types = () => {
       .catch( err => console.log(err))
   }, []);
 
+  function handleClick(value) {
+    history.push('/type', {
+      slug: value,
+    });
+  }
+
   return (
     <Container>
       <Header>
@@ -27,16 +35,16 @@ const Types = () => {
 
       <Grid>
         { types.map(name => (
-        <TileType key={name}>
-          <h2>{name}</h2>
+        <TileType 
+          key={name} 
+          value={name} 
+          onClick={e => handleClick(e.target.value)}
+        >
+          {name}
         </TileType>
         ))}
       </Grid>
     </Container>
-    // <div>
-    //   <Title title={`Pokemon types: ${countTypes}`}/>
-    //   <TileType types={types} />
-    // </div>
   )
 }
 
