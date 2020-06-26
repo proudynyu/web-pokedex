@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   padding: 15px;
   display: flex;
-  height: 75vh;
+  height: auto;
   flex-direction: column;
   justify-content: space-between;
 `;
@@ -44,6 +44,7 @@ export const Content = styled.div`
   height: 80%;
 
   padding: 5px;
+  margin-top: 8px;
 
   background-color: var(--second);
   border-radius: 4px;
@@ -52,9 +53,9 @@ export const Content = styled.div`
 
 export const Text = styled.div`
   flex: 1;
-
+  font-size: 16px;
   > span {
-    font-size: 16px;
+    font-size: 14px;
     
       > a {
         text-decoration: none;

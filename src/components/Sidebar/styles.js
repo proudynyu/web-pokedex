@@ -15,7 +15,7 @@ export const Hiper = styled(Link)`
   flex: 1;
   text-align: center;
   color: var(--fourth);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: bold;
 `;
 
