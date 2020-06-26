@@ -21,9 +21,7 @@ const Types = () => {
   }, []);
 
   function handleClick(value) {
-    history.push('/type', {
-      slug: value,
-    });
+    history.push(`/types/${value}`);
   }
 
   return (
