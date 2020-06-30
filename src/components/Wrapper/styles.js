@@ -42,7 +42,8 @@ export const TileType = styled.button`
   transition: transform .2s, background-color .2s;
 
   &:hover {
-    background-color: var(--third);
+    background-color: transparent;
+    border: 1px solid var(--fifth);
     transform: scale(1.02);
   }
 `;

@@ -15,9 +15,8 @@ export const Header = styled.header`
   padding: 5px;
 
   justify-content: space-between;
-  background-color: var(--second);
+  background-color: var(--fourth);
   border-radius: 4px;
-  border: 2px solid var(--fourth);
 
   > span {
     color: var(--third);
@@ -28,13 +27,13 @@ export const Header = styled.header`
 export const Title = styled.h1`
   font-size: 25px;
   font-weight: bold;
-  color: var(--fourth);
+  color: var(--word);
 `;
 
 export const Subtitle = styled.h3`
   font-size: 22px;
   font-weight: bold;
-  color: var(--fourth);
+  color: var(--word);
   margin-bottom: 5px;
 `;
 
@@ -46,19 +45,21 @@ export const Content = styled.div`
   padding: 5px;
   margin-top: 8px;
 
-  background-color: var(--second);
+  background-color: var(--fourth);
   border-radius: 4px;
-  border: 2px solid var(--fourth);
 `;
 
 export const Text = styled.div`
   flex: 1;
   font-size: 16px;
+  color: var(--word);
+
   > span {
     font-size: 14px;
     
       > a {
         text-decoration: none;
+        color: var(--fifth);
       }
   }
   
@@ -81,7 +82,7 @@ export const Form = styled.form`
   > label {
     font-size: 18px;
     font-weight: bold;
-    color: var(--fourth);
+    color: var(--word);
   }
 
   > input {
@@ -92,6 +93,7 @@ export const Form = styled.form`
     outline: none;
     margin-top: 5px;
     font-size: 18px;
-    color: var(--third);
+    color: var(--fifth);
+    background-color: var(--first);
   }
 `;

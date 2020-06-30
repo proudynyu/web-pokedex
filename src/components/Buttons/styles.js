@@ -9,16 +9,17 @@ export const List = styled.li`
 
   background-color: var(--fifth);
   border-radius: 4px;
+  border: 1px solid var(--fifth);
+  
 
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform .2s, background-color .2s;
+  transition: transform .2s, background-color .5s;
 
   cursor: pointer;
 
   &:hover {
-    background-color: var(--third);
-    transform: scale(1.05);
+    background-color: transparent;
   }
 `;

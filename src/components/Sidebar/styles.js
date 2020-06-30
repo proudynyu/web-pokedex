@@ -20,6 +20,11 @@ export const Hiper = styled(Link)`
   color: var(--word);
   font-size: 18px;
   font-weight: bold;
+
+  > span {
+    display: flex;
+    margin-right: 10px;
+  }
 `;
 
 

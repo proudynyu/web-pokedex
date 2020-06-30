@@ -60,14 +60,15 @@ export const Wrapper = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  margin-top: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 5px;
+  width: 80%;
+  margin: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-gap: 8px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--second);
-  border: 2px solid white;
+  background-color: var(--fifth);
+  border: 1px solid var(--fifth);
   border-radius: 4px;
 
   display: flex;
@@ -78,13 +79,50 @@ export const TileType = styled.button`
 
   cursor: pointer;
 
-  color: var(--fourth);
+  color: var(--word);
   font-size: 18px;
 
   transition: transform .2s, background-color .2s;
 
   &:hover {
-    background-color: var(--third);
-    transform: scale(1.02);
+    background-color: transparent;
+    transform: scale(1.03);
+  }
+`;
+
+export const PokeGrid = styled.div`
+  display: grid;
+  width: 80%;
+  margin: 10px auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-gap: 8px;
+
+  @media (max-width: 800px) {
+    margin: 10px auto;
+    width: 90%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+  }
+`;
+
+export const PokeContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid var(--fifth);
+  border-radius: 4px;
+  padding: 5px;
+
+  color: var(--word);
+
+  transition: background-color .2s;
+
+  cursor: pointer;
+
+  box-shadow: var(--default-shadow);
+
+  &:hover {
+    background-color: var(--first);
   }
 `;

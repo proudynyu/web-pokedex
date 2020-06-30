@@ -15,9 +15,8 @@ export const Header = styled.header`
   padding: 5px;
 
   justify-content: space-between;
-  background-color: var(--second);
+  background-color: var(--fourth);
   border-radius: 4px;
-  border: 2px solid var(--fourth);
 
   > span {
     color: var(--third);
@@ -28,7 +27,7 @@ export const Header = styled.header`
 export const Title = styled.h1`
   font-size: 25px;
   font-weight: bold;
-  color: var(--fourth);
+  color: var(--word);
 `;
 
 export const Grid = styled.div`
@@ -39,9 +38,9 @@ export const Grid = styled.div`
 `;
 
 export const TileType = styled.button`
-  background-color: var(--second);
-  border: 2px solid white;
+  background-color: var(--fifth);
   border-radius: 4px;
+  border: 1px solid var(--fifth);
 
   display: flex;
   justify-content: center;
@@ -51,13 +50,13 @@ export const TileType = styled.button`
 
   cursor: pointer;
 
-  color: var(--fourth);
+  color: var(--word);
   font-size: 18px;
 
-  transition: transform .2s, background-color .2s;
+  transition: transform .2s, background-color .5s;
 
   &:hover {
-    background-color: var(--third);
-    transform: scale(1.02);
+    background-color: transparent;
+    transform: scale(1.01);
   }
 `;
