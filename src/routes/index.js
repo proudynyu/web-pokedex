@@ -16,6 +16,7 @@ const Router = () => {
         <Route path="/types/:type/:name" exact component={Types} />
         <Route path="/locations" exact component={Locations} />
         <Route path="/pokemon/:name" exact component={SinglePokemon} />
+        <Route path="/pokemon/" exact component={Pokemon} />
       </Switch>
   )
 }

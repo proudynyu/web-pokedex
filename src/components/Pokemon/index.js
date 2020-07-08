@@ -11,7 +11,7 @@ const Pokemon = () => {
       })
   }, []);
 
-  console.log(pokemons);
+  console.log(pokemons.length);
 
   return (
     <div>
