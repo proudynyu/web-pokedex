@@ -92,9 +92,48 @@ export const ProfileContainer = styled.div`
   justify-content: space-between;
 
   min-width: 300px;
-  margin-left: 15px;
+  margin-left: 18px;
 
   color: var(--word);
   font-size: 20px;
   font-weight: bold;
+`;
+
+export const Status = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  padding: 0 5px;
+  margin: 5px;
+`;
+
+export const Grid = styled.div`
+  display: grid;
+  margin-top: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  grid-gap: 5px;
+`;
+
+export const TileType = styled.button`
+  background-color: var(--fifth);
+  border-radius: 4px;
+  border: 1px solid var(--fifth);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 2rem;
+
+  cursor: pointer;
+
+  color: var(--word);
+  font-size: 18px;
+
+  transition: background-color .5s;
+
+  &:hover {
+    background-color: transparent;
+  }
 `;
