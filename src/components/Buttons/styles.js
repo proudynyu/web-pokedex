@@ -4,8 +4,8 @@ export const List = styled.li`
   list-style: none;
 
   margin: 10px auto;
-  width: 80%;
-  height: 2rem;
+  width: 100%;
+  height: 2.5rem;
 
   background-color: var(--fifth);
   border-radius: 4px;

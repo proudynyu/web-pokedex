@@ -32,21 +32,21 @@ export const Title = styled.h1`
 
 export const Grid = styled.div`
   display: grid;
-  margin-top: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 5px;
+  margin-top: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
+  grid-gap: 8px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--fifth);
-  border-radius: 4px;
-  border: 1px solid var(--fifth);
+  background-color: var(--royal);
+  border-radius: 15px;
+  border: 1px solid var(--royal);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 2rem;
+  height: 3.5rem;
 
   cursor: pointer;
 
