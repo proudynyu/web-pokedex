@@ -47,29 +47,8 @@ export const Subtitle = styled.h3`
   font-size: 22px;
   font-weight: bold;
   color: var(--word);
+  margin-top: 15px;
   margin-bottom: 5px;
-`;
-
-export const ImgContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 10px 5px;
-
-  border: 1px solid var(--fifth);
-  border-radius: 8px;
-`;
-
-export const ImgGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
-  grid-gap: 8px;
-
-  width: 90%;
-  margin: 10px auto;
-  color: var(--word);
 `;
 
 export const Grid = styled.div`
@@ -78,6 +57,25 @@ export const Grid = styled.div`
   margin: 5px auto;
   grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   grid-gap: 5px;
+
+  > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--royal);
+
+    border-radius: 5px;
+
+    height: 2rem;
+
+    margin: 5px 10px;
+    padding: 5px;
+
+    box-shadow: var(--default-shadow);
+  }
 `;
 
 export const TileType = styled.button`
@@ -100,5 +98,28 @@ export const TileType = styled.button`
 
   &:hover {
     background-color: transparent;
+  }
+`;
+
+export const PokeContainer = styled.button`
+  border: 0.5px solid var(--royal);
+  border-radius: 8px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  outline: none;
+
+  font-size: 16px;
+  color: var(--word);
+
+  transition: background-color .2s;
+
+  height: 2rem;
+
+  cursor: pointer;
+
+  /* box-shadow: var(--default-shadow); */
+
+  &:hover {
+    background-color: var(--first);
   }
 `;

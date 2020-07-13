@@ -6,11 +6,9 @@ import axios from 'axios';
 const Sprite = ({ url, name }) => {
   const history = useHistory();
   const [sprite, setSprite] = useState('');
-  const [loading, setLoading] = useState(false);
 
   axios.get(url)
     .then(resp => {
-      setLoading(true);
       const data = resp.data;
       const sprites = data.sprites;
       setSprite(sprites.front_default);

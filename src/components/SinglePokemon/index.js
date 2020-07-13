@@ -22,8 +22,9 @@ const SinglePokemon = () => {
   const [types, setTypes] = useState([]);
   const [moves, setMoves] = useState([]);
   const [skills, setSkills] = useState([]);
-  const [pokemon, setPokemon] = useState()
-  const [sprites, setSprites] = useState()
+  const [pokemon, setPokemon] = useState();
+  const [sprites, setSprites] = useState();
+  const [species, setSpecies] = useState('');
 
   useEffect(() => {
     api.get(`pokemon/${name}`)
@@ -60,6 +61,9 @@ const SinglePokemon = () => {
 
         const abilities = data.abilities;
         setSkills(abilities);
+
+        const specie = data.species;
+        setSpecies(specie);
       });
   }, [name]);
 
@@ -112,7 +116,14 @@ const SinglePokemon = () => {
       </Content>
       
       <Content>
-          <Title>Evolutions</Title>
+          <Title>Species</Title>
+          <Grid>
+            <TileType
+              value={species.name}
+            >
+              {species.name}
+            </TileType>
+          </Grid>
       </Content>
 
       <Content>
