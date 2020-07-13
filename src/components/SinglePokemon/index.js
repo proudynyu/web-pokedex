@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import PokeProfile from '../PokeProfile';
 
 import api from '../../services/api';
 import { 
@@ -9,10 +10,7 @@ import {
   Title, 
   ImgContainer, 
   ImgGrid, 
-  Subtitle, 
-  Profile,
-  ProfileContainer,
-  Status,
+  Subtitle,
   Grid,
   TileType
 } from './styles';
@@ -24,30 +22,8 @@ const SinglePokemon = () => {
   const [types, setTypes] = useState([]);
   const [moves, setMoves] = useState([]);
   const [skills, setSkills] = useState([]);
-
-  const [pokemon, setPokemon] = useState({
-    name: '',
-    height: '',
-    baseXp: '',
-    weight: '',
-    hp: '',
-    attack: '',
-    defense: '',
-    speed: '',
-    specialAttack: '',
-    specialDefense: '',
-  })
-
-  const [sprites, setSprites] = useState({
-    front_default: '',
-    back_default: '',
-    front_female: '',
-    back_female: '',
-    front_shiny: '',
-    back_shiny: '',
-    front_shiny_female: '',
-    back_shiny_female: '',
-  })
+  const [pokemon, setPokemon] = useState()
+  const [sprites, setSprites] = useState()
 
   useEffect(() => {
     api.get(`pokemon/${name}`)
@@ -73,8 +49,7 @@ const SinglePokemon = () => {
           speed: data.stats[3].base_stat,
           specialAttack: data.stats[4].base_stat,
           specialDefense: data.stats[5].base_stat,
-        }
-
+        };
         setPokemon(poke);
 
         const type = data.types;
@@ -85,8 +60,18 @@ const SinglePokemon = () => {
 
         const abilities = data.abilities;
         setSkills(abilities);
-      })
-  }, [name])
+      });
+  }, [name]);
+
+  if (!pokemon) {
+    return (
+      <Container>
+        <Header>
+          <Title>Carregando ...</Title>
+        </Header>
+      </Container>
+    )
+  }
 
   return (
     <Container>
@@ -95,49 +80,19 @@ const SinglePokemon = () => {
       </Header>
 
       <Content>
-        <Profile>
-          <img src={defaultSprite} alt=""/>
-          <ProfileContainer>
-            <Status>
-              <span>Name:</span> <span>{ name.charAt(0).toUpperCase() + name.slice(1) }</span>
-            </Status>
-            <Status>
-              <span>Heigth:</span> <span>{ pokemon.height }</span>
-            </Status>
-            <Status>
-              <span>Base Xp:</span> <span>{pokemon.baseXp }</span>
-            </Status>
-            <Status>
-              <span>Weight:</span> <span>{ pokemon.weight }</span>
-            </Status>
-          </ProfileContainer>
-          <ProfileContainer>
-            <Status>
-              <span>HP: </span>
-              <span>{ pokemon.hp }</span>
-            </Status>
-            <Status>
-              <span>Attack: </span>
-              <span>{ pokemon.attack }</span>
-            </Status>
-            <Status>
-              <span>Defense: </span>
-              <span>{ pokemon.defense }</span>
-            </Status>
-            <Status>
-              <span>Speed: </span>
-              <span>{ pokemon.speed }</span>
-            </Status>
-            <Status>
-              <span>Special-Attack: </span>
-              <span>{ pokemon.specialAttack }</span>
-            </Status>
-            <Status>
-              <span>Special-Defense: </span>
-              <span>{ pokemon.specialDefense }</span>
-            </Status>
-          </ProfileContainer>
-        </Profile>
+        <PokeProfile
+          sprite={defaultSprite}
+          name={name}
+          height={pokemon.height}
+          basexp={pokemon.baseXp}
+          weight={pokemon.weight}
+          hp={pokemon.hp}
+          attack={pokemon.attack}
+          defense={pokemon.defense}
+          speed={pokemon.speed}
+          specialAttack={pokemon.specialAttack}
+          specialDefense={pokemon.specialDefense}
+        />
       </Content>
 
       <Content>

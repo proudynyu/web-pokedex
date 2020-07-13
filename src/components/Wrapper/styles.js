@@ -18,21 +18,21 @@ export const Container = styled.div`
 export const Grid = styled.div`
   display: grid;
   width: 80%;
-  margin: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  margin: 15px auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   grid-gap: 8px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--fifth);
-  border-radius: 4px;
+  background-color: var(--royal);
+  border-radius: 15px;
   border: none;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 2rem;
+  height: 3.5rem;
 
   cursor: pointer;
 
@@ -43,7 +43,7 @@ export const TileType = styled.button`
 
   &:hover {
     background-color: transparent;
-    border: 1px solid var(--fifth);
+    border: 1px solid var(--royal);
     transform: scale(1.02);
   }
 `;

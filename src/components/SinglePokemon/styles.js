@@ -72,59 +72,24 @@ export const ImgGrid = styled.div`
   color: var(--word);
 `;
 
-export const Profile = styled.div`
-  display: flex;
-  width: 90%;
-  margin: auto;
-  align-items: center;
-
-  > img {
-    width: 150px;
-    height: 150px;
-    background-color: var(--first);
-    border-radius: 8px;
-  }
-`;
-
-export const ProfileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-width: 300px;
-  margin-left: 18px;
-
-  color: var(--word);
-  font-size: 20px;
-  font-weight: bold;
-`;
-
-export const Status = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-
-  padding: 0 5px;
-  margin: 5px;
-`;
-
 export const Grid = styled.div`
   display: grid;
-  margin-top: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
+  width: 80%;
+  margin: 5px auto;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   grid-gap: 5px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--fifth);
-  border-radius: 4px;
-  border: 1px solid var(--fifth);
+  background-color: var(--royal);
+  border-radius: 15px;
+  border: 1px solid var(--royal);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  height: 2rem;
+  height: 2.5rem;
 
   cursor: pointer;
 

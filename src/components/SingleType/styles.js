@@ -62,13 +62,13 @@ export const Grid = styled.div`
   display: grid;
   width: 80%;
   margin: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   grid-gap: 8px;
 `;
 
 export const TileType = styled.button`
-  background-color: var(--fifth);
-  border: 1px solid var(--fifth);
+  background-color: var(--royal);
+  border: 1px solid var(--royal);
   border-radius: 4px;
 
   display: flex;
@@ -94,7 +94,7 @@ export const PokeGrid = styled.div`
   display: grid;
   width: 80%;
   margin: 10px auto;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 240px));
   grid-gap: 8px;
 
   @media (max-width: 800px) {
