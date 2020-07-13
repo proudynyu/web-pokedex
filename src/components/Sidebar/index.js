@@ -12,7 +12,7 @@ const Sidebar = () => {
         <Button><Hiper to="/"><span><FaHome size={15} /></span>Home</Hiper></Button>
         <Button><Hiper to="/types"><span><FaDragon size={15} /></span>Pokemon types</Hiper></Button>
         <Button><Hiper to="/pokemon"><span><FaGhost size={15} /></span>Pokemons</Hiper></Button>
-        <Button><Hiper to="#"><span><FaGamepad size={15} /></span>Generations</Hiper></Button>
+        <Button><Hiper to="/generations"><span><FaGamepad size={15} /></span>Generations</Hiper></Button>
         <Button><Hiper to="/locations"><span><FaLocationArrow size={15} /></span>Locations</Hiper></Button>
         <Button><Hiper to="#"><span><FaCarAlt size={15} /></span>Regions</Hiper></Button>
         <Button><Hiper to="#"><span></span>Species</Hiper></Button>

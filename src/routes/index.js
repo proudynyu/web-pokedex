@@ -6,6 +6,8 @@ import SingleType from '../components/SingleType';
 import Locations from '../components/Locations';
 import Pokemon from '../components/Pokemon';
 import SinglePokemon from '../components/SinglePokemon';
+import Generations from '../components/Generations';
+import SingleGen from '../components/SingleGen';
 
 const Router = () => {
   return (
@@ -15,6 +17,8 @@ const Router = () => {
         <Route path="/types/:slug" exact component={SingleType} />
         <Route path="/types/:type/:name" exact component={Types} />
         <Route path="/locations" exact component={Locations} />
+        <Route path="/generations" exact component={Generations} />
+        <Route path="/generations/:gen" exact component={SingleGen} />
         <Route path="/pokemon/:name" exact component={SinglePokemon} />
         <Route path="/pokemon/" exact component={Pokemon} />
       </Switch>
