@@ -15,7 +15,7 @@ const Sidebar = () => {
         <Button><Hiper to="/generations"><span><FaGamepad size={15} /></span>Generations</Hiper></Button>
         <Button><Hiper to="/locations"><span><FaLocationArrow size={15} /></span>Locations</Hiper></Button>
         <Button><Hiper to="#"><span><FaCarAlt size={15} /></span>Regions</Hiper></Button>
-        <Button><Hiper to="#"><span></span>Species</Hiper></Button>
+        <Button><Hiper to="/species"><span></span>Species</Hiper></Button>
         <Button><Hiper to="#"><span></span>Moves</Hiper></Button>
         <Button><Hiper to="#"><span></span>Abilities</Hiper></Button>
       </ul>

@@ -8,6 +8,7 @@ import Pokemon from '../components/Pokemon';
 import SinglePokemon from '../components/SinglePokemon';
 import Generations from '../components/Generations';
 import SingleGen from '../components/SingleGen';
+import Species from '../components/Species';
 
 const Router = () => {
   return (
@@ -21,6 +22,7 @@ const Router = () => {
         <Route path="/generations/:gen" exact component={SingleGen} />
         <Route path="/pokemon/:name" exact component={SinglePokemon} />
         <Route path="/pokemon/" exact component={Pokemon} />
+        <Route path="/species" exact component={Species} />
       </Switch>
   )
 }
